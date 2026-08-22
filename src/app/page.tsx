@@ -10,9 +10,10 @@ import {
 import { CodeCard, GuideCard } from "@/components/cards";
 import { Card, PageHero, QuickAnswer, Section, SectionTitle } from "@/components/ui";
 import { ACTIVE_CODES } from "@/lib/data/codes";
-import { FAQS, GUIDES } from "@/lib/data/content";
+import { GUIDES } from "@/lib/data/content";
 import { LAST_CHECKED, OFFICIAL_LINKS } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("home");
 
@@ -46,6 +47,7 @@ const hubs = [
 export default function HomePage() {
   return (
     <>
+      <SeoHead pageKey="home" />
       <PageHero
         kicker="Roblox anime fighter wiki"
         title="Roll Anime to Fight Codes, Tier List & Wave Guides"
@@ -189,22 +191,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section>
-        <SectionTitle kicker="FAQ" title="Quick answers" />
-        <div className="grid gap-3">
-          {FAQS.map((item) => (
-            <details
-              key={item.q}
-              className="rounded-2xl border border-border bg-card/70 px-5 py-4"
-            >
-              <summary className="cursor-pointer list-none font-semibold">
-                {item.q}
-              </summary>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </Section>
+      <SeoFoot pageKey="home" />
     </>
   );
 }

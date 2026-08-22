@@ -3,6 +3,7 @@ import { TRAITS } from "@/lib/data/traits";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("traits");
 
@@ -15,6 +16,7 @@ const keepStyles = {
 export default function TraitsPage() {
   return (
     <>
+      <SeoHead pageKey="traits" />
       <PageHero
         kicker="Traits"
         title="Roll Anime to Fight Traits — Keep or Reroll"
@@ -90,6 +92,7 @@ export default function TraitsPage() {
           </p>
         </Card>
       </Section>
+      <SeoFoot pageKey="traits" />
     </>
   );
 }

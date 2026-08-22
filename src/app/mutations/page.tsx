@@ -3,12 +3,14 @@ import { MUTATIONS, MUTATION_ROTATION } from "@/lib/data/mutations";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("mutations");
 
 export default function MutationsPage() {
   return (
     <>
+      <SeoHead pageKey="mutations" />
       <PageHero
         kicker="Mutations"
         title="Roll Anime to Fight Mutations Guide"
@@ -86,6 +88,7 @@ export default function MutationsPage() {
           ))}
         </div>
       </Section>
+      <SeoFoot pageKey="mutations" />
     </>
   );
 }

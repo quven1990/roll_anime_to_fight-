@@ -5,12 +5,14 @@ import { NAV_ITEMS } from "@/lib/navigation";
 import { GUIDES } from "@/lib/data/content";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("wiki");
 
 export default function WikiPage() {
   return (
     <>
+      <SeoHead pageKey="wiki" />
       <PageHero
         kicker="Wiki"
         title="Roll Anime to Fight Wiki Hub"
@@ -69,6 +71,7 @@ export default function WikiPage() {
           </ul>
         </Card>
       </Section>
+      <SeoFoot pageKey="wiki" />
     </>
   );
 }

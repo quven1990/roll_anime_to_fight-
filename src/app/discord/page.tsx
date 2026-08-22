@@ -2,12 +2,14 @@ import Link from "next/link";
 import { Card, PageHero, QuickAnswer, Section, SectionTitle } from "@/components/ui";
 import { LAST_CHECKED, OFFICIAL_LINKS } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("discord");
 
 export default function DiscordPage() {
   return (
     <>
+      <SeoHead pageKey="discord" />
       <PageHero
         kicker="Discord"
         title="Roll Anime to Fight Discord — Safe Invite Guide"
@@ -65,6 +67,7 @@ export default function DiscordPage() {
           </Link>
         </p>
       </Section>
+      <SeoFoot pageKey="discord" />
     </>
   );
 }

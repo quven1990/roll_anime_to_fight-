@@ -1,12 +1,14 @@
 import { Card, PageHero, Section } from "@/components/ui";
 import { SITE_NAME } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("privacy");
 
 export default function PrivacyPage() {
   return (
     <>
+      <SeoHead pageKey="privacy" />
       <PageHero
         kicker="Legal"
         title="Privacy Policy"
@@ -29,6 +31,7 @@ export default function PrivacyPage() {
           <p>Last updated: August 22, 2026.</p>
         </Card>
       </Section>
+      <SeoFoot pageKey="privacy" />
     </>
   );
 }

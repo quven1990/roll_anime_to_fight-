@@ -1,12 +1,14 @@
 import { Card, PageHero, Section } from "@/components/ui";
 import { SITE_NAME } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("terms");
 
 export default function TermsPage() {
   return (
     <>
+      <SeoHead pageKey="terms" />
       <PageHero
         kicker="Legal"
         title="Terms of Use"
@@ -29,6 +31,7 @@ export default function TermsPage() {
           <p>Last updated: August 22, 2026.</p>
         </Card>
       </Section>
+      <SeoFoot pageKey="terms" />
     </>
   );
 }

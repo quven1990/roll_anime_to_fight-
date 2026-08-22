@@ -3,12 +3,14 @@ import { Card, PageHero, Section, SectionTitle } from "@/components/ui";
 import { UPDATES } from "@/lib/data/content";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("updates");
 
 export default function UpdatesPage() {
   return (
     <>
+      <SeoHead pageKey="updates" />
       <PageHero
         kicker="Updates"
         title="Roll Anime to Fight Updates & Patch Watch"
@@ -54,6 +56,7 @@ export default function UpdatesPage() {
           </Link>
         </div>
       </Section>
+      <SeoFoot pageKey="updates" />
     </>
   );
 }

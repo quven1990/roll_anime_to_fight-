@@ -3,12 +3,14 @@ import { Card, PageHero, QuickAnswer, Section, SectionTitle } from "@/components
 import { UNIT_ROLES } from "@/lib/data/tiers";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("units");
 
 export default function UnitsPage() {
   return (
     <>
+      <SeoHead pageKey="units" />
       <PageHero
         kicker="Units"
         title="Roll Anime to Fight Units & Team Roles"
@@ -66,6 +68,7 @@ export default function UnitsPage() {
           </Link>
         </div>
       </Section>
+      <SeoFoot pageKey="units" />
     </>
   );
 }

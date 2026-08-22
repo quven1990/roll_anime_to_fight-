@@ -3,6 +3,7 @@ import { Card, PageHero, Section, SectionTitle } from "@/components/ui";
 import { GUIDES } from "@/lib/data/content";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("guides");
 
@@ -16,6 +17,7 @@ const anchorBySlug: Record<string, string> = {
 export default function GuidesPage() {
   return (
     <>
+      <SeoHead pageKey="guides" />
       <PageHero
         kicker="Guides"
         title="Roll Anime to Fight Guides"
@@ -74,6 +76,7 @@ export default function GuidesPage() {
           </Link>
         </div>
       </Section>
+      <SeoFoot pageKey="guides" />
     </>
   );
 }

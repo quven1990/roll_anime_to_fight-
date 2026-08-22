@@ -8,12 +8,14 @@ import {
 } from "@/lib/data/codes";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("codes");
 
 export default function CodesPage() {
   return (
     <>
+      <SeoHead pageKey="codes" />
       <PageHero
         kicker="Codes"
         title="Roll Anime to Fight Codes (August 2026)"
@@ -96,6 +98,7 @@ export default function CodesPage() {
           </Link>
         </Card>
       </Section>
+      <SeoFoot pageKey="codes" />
     </>
   );
 }

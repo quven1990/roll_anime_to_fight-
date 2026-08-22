@@ -1,4 +1,4 @@
-export const SITE_URL = "https://rollanimetofight.guide";
+export const SITE_URL = "https://roll-anime-to-fight-agu.pages.dev";
 
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
@@ -16,9 +16,17 @@ export const SITE_DESCRIPTION =
   "Unofficial Roll Anime to Fight wiki with active codes, fighter tier picks, trait keep-or-reroll advice, mutation tiers, and wave progression guides. Updated August 2026.";
 
 export const LAST_CHECKED = "August 22, 2026";
+export const DATE_MODIFIED = "2026-08-22";
 
 export const OFFICIAL_LINKS = {
   roblox:
     "https://www.roblox.com/games/107653945083776/Roll-Anime-to-Fight",
   creatorGroup: "Another Slop",
+} as const;
+
+export const OG_IMAGE = {
+  url: "/og.png",
+  width: 1376,
+  height: 768,
+  alt: "Roll Anime to Fight Wiki — Codes, Tier List, and Guides",
 } as const;

@@ -3,6 +3,7 @@ import { TIER_LIST } from "@/lib/data/tiers";
 import { LAST_CHECKED } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("tierList");
 
@@ -11,6 +12,7 @@ const tiers = ["S", "A", "B", "C"] as const;
 export default function TierListPage() {
   return (
     <>
+      <SeoHead pageKey="tierList" />
       <PageHero
         kicker="Tier List"
         title="Roll Anime to Fight Tier List — Fighter Picks"
@@ -83,6 +85,7 @@ export default function TierListPage() {
           ))}
         </div>
       </Section>
+      <SeoFoot pageKey="tierList" />
     </>
   );
 }

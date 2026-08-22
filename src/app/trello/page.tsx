@@ -2,12 +2,14 @@ import Link from "next/link";
 import { Card, PageHero, QuickAnswer, Section, SectionTitle } from "@/components/ui";
 import { LAST_CHECKED, OFFICIAL_LINKS } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("trello");
 
 export default function TrelloPage() {
   return (
     <>
+      <SeoHead pageKey="trello" />
       <PageHero
         kicker="Trello"
         title="Roll Anime to Fight Trello"
@@ -72,6 +74,7 @@ export default function TrelloPage() {
           </Link>
         </div>
       </Section>
+      <SeoFoot pageKey="trello" />
     </>
   );
 }

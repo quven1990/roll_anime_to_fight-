@@ -3,12 +3,14 @@ import { ExternalLink } from "lucide-react";
 import { Card, PageHero, QuickAnswer, Section, SectionTitle } from "@/components/ui";
 import { LAST_CHECKED, OFFICIAL_LINKS } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
+import { SeoFoot, SeoHead } from "@/components/seo-extras";
 
 export const metadata = buildMetadata("roblox");
 
 export default function RobloxPage() {
   return (
     <>
+      <SeoHead pageKey="roblox" />
       <PageHero
         kicker="Roblox Game"
         title="Play Roll Anime to Fight! on Roblox"
@@ -67,6 +69,7 @@ export default function RobloxPage() {
           </div>
         </Card>
       </Section>
+      <SeoFoot pageKey="roblox" />
     </>
   );
 }
